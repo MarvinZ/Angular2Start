@@ -6,13 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AlertModule } from 'ng2-bootstrap';
 
-
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     AlertModule.forRoot(), 
+    ToastModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule
