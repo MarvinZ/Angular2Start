@@ -18,6 +18,10 @@ import { NavComponent } from './nav/nav.component';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component'
 import { AuthService } from './user/auth.service'
+import { ThingService } from './services/thing.service'
+
+import {} from './models'
+
 import { GenericReportComponent } from './generic-report/generic-report.component'
 
 @NgModule({
@@ -27,7 +31,7 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
     Test2Component,
     NavComponent,
     GenericReportComponent,
-    Error404Component,
+    Error404Component
   ],
   imports: [
     AlertModule.forRoot(), 
@@ -40,7 +44,8 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
   ],
   providers: [
     
-        AuthService
+        AuthService,
+        ThingService
   ],
   bootstrap: [AppComponent]
 })
