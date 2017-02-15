@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router'
 
@@ -16,6 +16,8 @@ import { Test2Component } from './test2/test2.component';
 import { NavComponent } from './nav/nav.component';
 
 import { appRoutes } from './routes';
+import { Error404Component } from './errors/404.component'
+import { AuthService } from './user/auth.service'
 import { GenericReportComponent } from './generic-report/generic-report.component'
 
 @NgModule({
@@ -24,7 +26,8 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
     Test1Component,
     Test2Component,
     NavComponent,
-    GenericReportComponent
+    GenericReportComponent,
+    Error404Component,
   ],
   imports: [
     AlertModule.forRoot(), 
@@ -32,9 +35,13 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    
+        AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
