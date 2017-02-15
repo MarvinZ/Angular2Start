@@ -1,19 +1,28 @@
 import { Component, ViewContainerRef, OnInit } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
+import { Localization, LocaleService, TranslationService } from 'angular-l10n';
+
 
 @Component({
   templateUrl: './test1.component.html',
   styleUrls: ['./test1.component.css']
 })
-export class Test1Component implements OnInit {
+export class Test1Component extends Localization implements OnInit {
      title = 'app works!';
+     today: number;
+    pi: number;
+    value: number;
   
   public  test(): void {
     alert('test');
   }
 
-      constructor(public toastr: ToastsManager, vcr: ViewContainerRef) {
+      constructor(public toastr: ToastsManager, public vcr: ViewContainerRef, public locale: LocaleService, public translation: TranslationService) {
+        super(locale, translation);
+         this.today = Date.now();
+        this.pi = 3.14159;
+        this.value = Math.round(Math.random() * 1000000) / 100;
          // Use with angular v2.2 or above
          this.toastr.setRootViewContainerRef(vcr);
       }

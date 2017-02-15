@@ -20,6 +20,8 @@ import { Error404Component } from './errors/404.component'
 import { AuthService } from './user/auth.service'
 import { ThingService } from './services/thing.service'
 
+import { LocalizationModule } from 'angular-l10n';
+
 import {} from './models'
 
 import { GenericReportComponent } from './generic-report/generic-report.component'
@@ -40,7 +42,8 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    LocalizationModule.forRoot()
   ],
   providers: [
     

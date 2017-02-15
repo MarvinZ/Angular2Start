@@ -1,6 +1,19 @@
-<app-nav></app-nav>
+
+  <app-nav></app-nav>
+  <div class="container">
+
+
+<button (click)="selectLocale('en', 'US', 'USD');" class="btn btn-default">
+United states        </button>
+<button (click)="selectLocale('en', 'GB', 'GBP');" class="btn btn-default">United Kingdom</button>
+<button (click)="selectLocale('it', 'IT', 'EUR');" class="btn btn-default">Italia</button>
 <h1>
   {{title}} 
 </h1>
+
+<h1>{{ 'Title' | translate:lang }}</h1>
+
+        <h3>{{ 'Change country' | translate:lang }}</h3>
 <router-outlet></router-outlet>
+</div>
  
