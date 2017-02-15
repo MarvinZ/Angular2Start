@@ -1,46 +1,58 @@
 <div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" >Ng2Start</a>
+      <a class="navbar-brand" >ng2Start</a>
     </div>
 
-    <div class="collapse navbar-collapse">
+    <!--<div class="collapse navbar-collapse">-->
       <ul class="nav navbar-nav">
         <li>
-          <a href="/">Home</a>
+          <a [routerLink]="['/test1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">test 1</a>
         </li>
-        <li><a href="/test1">Something</a></li>
-        <li><a href="/test2">Something else</a></li>
-        <li class="dropdown">
+        <li><a [routerLink]="['/test2']" routerLinkActive="active">Test 2</a></li>
+                    <li >
+              <a [routerLink]="['/genericReport']" routerLinkActive="active">Generic Report</a>
+            </li>
+        <!--<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-            Reports
+            More Reports
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li >
-              <a href="/genericReport">Generic Report</a>
+              <a [routerLink]="['/genericReport']" routerLinkActive="active">Generic Report 2</a>
             </li>
                         <li >
-              <a href="">Report 2</a>
+              <a [routerLink]="['/genericReport']" routerLinkActive="active">Generic Report Again</a>
             </li>
           </ul>
         </li>
+         <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>-->
       </ul>
       <div class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
           <li>
-            <a>Welcome Marvin</a>
+            <!--<a *ngIf="!auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
+            <a *ngIf="auth.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{auth.currentUser.firstName}}</a>-->
           </li>
         </ul>
       </div>
       <form id="searchForm"  class="navbar-form navbar-right"  >
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search Sessions" >
+          <input type="text" class="form-control" placeholder="Search" >
         </div>
         <button class="btn btn-default" >
           Search
         </button>
       </form>
-    </div>
+    <!--</div>-->
   </div>
 </div>

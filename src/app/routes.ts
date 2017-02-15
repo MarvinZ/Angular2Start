@@ -5,7 +5,7 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
 
 
 
-export const appRoutes = [
+export const appRoutes: Routes = [
     { path:'test1', component: Test1Component },
     { path:'test2', component: Test2Component },
     { path:'genericReport', component: GenericReportComponent },
