@@ -15,14 +15,16 @@ import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { NavComponent } from './nav/nav.component';
 
-import { appRoutes } from './routes'
+import { appRoutes } from './routes';
+import { GenericReportComponent } from './generic-report/generic-report.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     Test1Component,
     Test2Component,
-    NavComponent
+    NavComponent,
+    GenericReportComponent
   ],
   imports: [
     AlertModule.forRoot(), 
