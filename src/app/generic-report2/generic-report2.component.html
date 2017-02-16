@@ -1,0 +1,16 @@
+<div *ngIf="auth.isAuthenticated()">
+  <p>
+  generic-report2 works too!
+</p>
+Am I authenticated? -> {{auth.isAuthenticated()}}
+</div>
+
+<div *ngIf="!auth.isAuthenticated()">
+<p>
+    You have no access to this module, here are some potatoes
+</p>
+<img src="https://media.giphy.com/media/iiZpZq2rpkkvu/giphy.gif" alt="potato" height="300" width="200"></div>
+
+
+
+
