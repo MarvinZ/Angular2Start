@@ -22,6 +22,8 @@ import { ThingService } from './services/thing.service'
 
 import { LocalizationModule } from 'angular-l10n';
 
+import { ThingFilterPipe } from './filters/thing-filter.pipe'
+
 import {} from './models'
 
 import { GenericReportComponent } from './generic-report/generic-report.component'
@@ -33,7 +35,8 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
     Test2Component,
     NavComponent,
     GenericReportComponent,
-    Error404Component
+    Error404Component,
+    ThingFilterPipe
   ],
   imports: [
     AlertModule.forRoot(), 
