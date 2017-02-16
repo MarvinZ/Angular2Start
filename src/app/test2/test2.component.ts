@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { IThing } from './../models/thing';
 import { ThingService } from './../services/thing.service';
 
+import { Localization, LocaleService, TranslationService } from 'angular-l10n';
+
 @Component({
   selector: 'app-test2',
   templateUrl: './test2.component.html',
   styleUrls: ['./test2.component.css']
 })
-export class Test2Component implements OnInit {
+export class Test2Component extends Localization implements OnInit {
     pageTitle: string = 'Thing List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -17,7 +19,10 @@ export class Test2Component implements OnInit {
 
     things: IThing[];
 
-  constructor(private _thingService: ThingService) { }
+  constructor(private _thingService: ThingService, public locale: LocaleService, public translation: TranslationService) {
+              super(locale, translation);
+
+   }
 
  toggleImage(): void {
         this.showImage = !this.showImage;
