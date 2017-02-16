@@ -6,7 +6,8 @@ import { RouterModule } from '@angular/router'
 
 
 import { AppComponent } from './app.component';
-import { AlertModule } from 'ng2-bootstrap';
+import { AlertModule, DropdownModule } from 'ng2-bootstrap';
+
 
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
@@ -42,6 +43,7 @@ import { GenericReport2Component } from './generic-report2/generic-report2.compo
   ],
   imports: [
     AlertModule.forRoot(), 
+    DropdownModule.forRoot(),
     ToastModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot(appRoutes),

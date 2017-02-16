@@ -11,7 +11,7 @@ import { IThing } from './../models/thing';
 
 @Injectable()
 export class ThingService {
-    private _thingUrl = 'http://localhost:29328/api/values';// running in other project, or just use the one in the api folder.
+    private _thingUrl = 'http://localhost:61555/api/values';// running in other project, or just use the one in the api folder.
 
     constructor(private _http: Http) { }
 
