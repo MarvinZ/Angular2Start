@@ -15,7 +15,7 @@ import { Localization, LocaleService, TranslationService } from 'angular-l10n';
         super(locale, translation);
 
         this.locale.AddConfiguration()
-            .AddLanguages(['en', 'it'])
+            .AddLanguages(['en', 'it', 'es', 'pt'])
             .SetCookieExpiration(30)
             .DefineDefaultLocale('en', 'US')
             .DefineCurrency('USD');

@@ -2,18 +2,21 @@
   <app-nav></app-nav>
   <div class="container">
 
+        <h3>{{ 'Change country' | translate:lang }}</h3>
+<button (click)="selectLocale('en', 'US', 'USD');" class="btn btn-default">United states English</button>
+<button (click)="selectLocale('es', 'US', 'USD');" class="btn btn-default">United states Spanish</button>
+<button (click)="selectLocale('en', 'GB', 'GBP');" class="btn btn-default">United Kingdom English</button>
+<button (click)="selectLocale('it', 'IT', 'EUR');" class="btn btn-default">Italia Italian</button>
+<button (click)="selectLocale('es', 'MX', 'USD');" class="btn btn-default">Latinamerica Español</button>
+<button (click)="selectLocale('pt', 'BR', 'USD');" class="btn btn-default">Brazil Portuguese</button>
 
-<button (click)="selectLocale('en', 'US', 'USD');" class="btn btn-default">
-United states        </button>
-<button (click)="selectLocale('en', 'GB', 'GBP');" class="btn btn-default">United Kingdom</button>
-<button (click)="selectLocale('it', 'IT', 'EUR');" class="btn btn-default">Italia</button>
 <h1>
   {{title}} 
 </h1>
 
 <h1>{{ 'Title' | translate:lang }}</h1>
 
-        <h3>{{ 'Change country' | translate:lang }}</h3>
+
 <router-outlet></router-outlet>
 </div>
  

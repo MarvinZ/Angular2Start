@@ -1,4 +1,7 @@
 {
     "Title": "Angular localization",
-    "Change country": "Change country"
+    "Change country": "Change country",
+    "Home": "Home", 
+    "Test2": "Test2",
+    "Generic report": "Generic Report"
 }
