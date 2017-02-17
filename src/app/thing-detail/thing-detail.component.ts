@@ -5,19 +5,22 @@ import { Subscription }       from 'rxjs/Subscription';
 
 import { IThing } from './../models/thing';
 import { ThingService } from './../services/thing.service';
+import { Localization, LocaleService, TranslationService } from 'angular-l10n';
 
 @Component({
   templateUrl: './thing-detail.component.html',
   styleUrls: ['./thing-detail.component.css']
 })
-export class ThingDetailComponent  implements OnInit, OnDestroy {
+export class ThingDetailComponent extends Localization  implements OnInit, OnDestroy {
   pageTitle: string = 'thing Detail';
     thing: IThing;
     errorMessage: string;
     private sub: Subscription;
   constructor(private _route: ActivatedRoute,
                 private _router: Router,
-                private _thingService: ThingService) { }
+                private _thingService: ThingService, public locale: LocaleService, public translation: TranslationService) 
+                              
+{super(locale, translation); }
 
   ngOnInit() {
     this.sub = this._route.params.subscribe(
