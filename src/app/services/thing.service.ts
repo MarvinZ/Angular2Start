@@ -22,10 +22,10 @@ export class ThingService {
             .catch(this.handleError);
     }
 
-    // getThing(id: number): Observable<IThing> {
-    //     return this.getThings()
-    //         .map((_thingUrl: IThing[]) => _thingUrl.find(p => p.thingId === id));
-    // }
+    getThing(id: number): Observable<IThing> {
+        return this.getThings()
+            .map((_thingUrl: IThing[]) => _thingUrl.find(p => p.thingId === id));
+    }
 
     private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure

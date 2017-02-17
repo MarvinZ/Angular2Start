@@ -28,7 +28,8 @@ import { ThingFilterPipe } from './filters/thing-filter.pipe'
 import {} from './models'
 
 import { GenericReportComponent } from './generic-report/generic-report.component'
-import { GenericReport2Component } from './generic-report2/generic-report2.component'
+import { GenericReport2Component } from './generic-report2/generic-report2.component';
+import { ThingDetailComponent } from './thing-detail/thing-detail.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { GenericReport2Component } from './generic-report2/generic-report2.compo
     GenericReportComponent,
     GenericReport2Component,
     Error404Component,
-    ThingFilterPipe
+    ThingFilterPipe,
+    ThingDetailComponent
   ],
   imports: [
     AlertModule.forRoot(), 
