@@ -47,6 +47,9 @@
             <a *ngIf="!auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
             <a *ngIf="auth.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{auth.currentUser.firstName}}</a>
           </li>
+          <li>
+              <a *ngIf="auth.isAuthenticated()" (click)="logout()">Log out </a>
+          </li>
         </ul>
       </div>
       <form id="searchForm"  class="navbar-form navbar-right"  >

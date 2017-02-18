@@ -9,8 +9,7 @@ import { Localization, LocaleService, TranslationService } from 'angular-l10n';
 })
 
   export class AppComponent extends Localization {
-      title = 'app works!';
-
+      
     constructor(public locale: LocaleService, public translation: TranslationService) {
         super(locale, translation);
 
