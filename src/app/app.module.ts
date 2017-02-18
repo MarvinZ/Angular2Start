@@ -62,8 +62,7 @@ import { StarComponent } from './star/star.component'
     HttpModule,
     LocalizationModule.forRoot()
   ],
-  providers: [
-    
+  providers: [    
         AuthService,
         ThingService,
         ThingDetailGuard,
