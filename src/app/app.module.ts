@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router'
 
 
 import { AppComponent } from './app.component';
-import { AlertModule, DropdownModule } from 'ng2-bootstrap';
+import { AlertModule, DropdownModule, AccordionModule  } from 'ng2-bootstrap';
 
 
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
@@ -54,6 +54,7 @@ import { StarComponent } from './star/star.component'
   imports: [
     AlertModule.forRoot(), 
     DropdownModule.forRoot(),
+    AccordionModule.forRoot()
     ToastModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot(appRoutes),
