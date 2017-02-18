@@ -5,11 +5,11 @@ import { ThingService } from './../services/thing.service';
 import { Localization, LocaleService, TranslationService } from 'angular-l10n';
 
 @Component({
-  selector: 'app-test2',
-  templateUrl: './test2.component.html',
-  styleUrls: ['./test2.component.css']
+  selector: 'app-things',
+  templateUrl: './things.component.html',
+  styleUrls: ['./things.component.css']
 })
-export class Test2Component extends Localization implements OnInit {
+export class ThingsComponent extends Localization implements OnInit {
     pageTitle: string = 'Thing List';
     imageWidth: number = 50;
     imageMargin: number = 2;

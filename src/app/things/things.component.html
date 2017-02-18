@@ -61,9 +61,9 @@
                         <td>{{ thing.releaseDate }}</td>
                         <td>{{ thing.price | currency:'USD':true:'1.2-2' }}</td>
                         <td>
-                            <!--<ai-star [rating]='thing.starRating'
+                            <star-rate [rating]='thing.starRating'
                                     (ratingClicked)='onRatingClicked($event)'>
-                            </ai-star>-->
+                            </star-rate>
                        </td>
                     </tr>
                 </tbody>

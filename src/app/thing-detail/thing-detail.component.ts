@@ -51,7 +51,7 @@ export class ThingDetailComponent extends Localization  implements OnInit, OnDes
     }
 
       onBack(): void {
-        this._router.navigate(['/test2']);
+        this._router.navigate(['/things']);
     }
 
 }

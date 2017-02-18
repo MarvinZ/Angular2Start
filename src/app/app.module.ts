@@ -12,8 +12,8 @@ import { AlertModule, DropdownModule } from 'ng2-bootstrap';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 
-import { Test1Component } from './test1/test1.component';
-import { Test2Component } from './test2/test2.component';
+import { HomeComponent } from './home/home.component';
+import { ThingsComponent } from './things/things.component';
 import { NavComponent } from './nav/nav.component';
 
 import { appRoutes } from './routes';
@@ -29,19 +29,21 @@ import {} from './models'
 
 import { GenericReportComponent } from './generic-report/generic-report.component'
 import { GenericReport2Component } from './generic-report2/generic-report2.component';
-import { ThingDetailComponent } from './thing-detail/thing-detail.component'
+import { ThingDetailComponent } from './thing-detail/thing-detail.component';
+import { StarComponent } from './star/star.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    Test1Component,
-    Test2Component,
+    HomeComponent,
+    ThingsComponent,
     NavComponent,
     GenericReportComponent,
     GenericReport2Component,
     Error404Component,
     ThingFilterPipe,
-    ThingDetailComponent
+    ThingDetailComponent,
+    StarComponent
   ],
   imports: [
     AlertModule.forRoot(), 

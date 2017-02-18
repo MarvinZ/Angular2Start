@@ -15,10 +15,10 @@ export class LoginComponent {
 
   login(formValues) {
     this.authService.loginUser(formValues.userName, formValues.password)
-    this.router.navigate(['test1'])
+    this.router.navigate(['home'])
   }
 
   cancel() {
-    this.router.navigate(['test1'])
+    this.router.navigate(['home'])
   }
 }

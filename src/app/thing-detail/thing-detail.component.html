@@ -26,14 +26,14 @@
                     <div class='col-md-3'>Price:</div>
                     <div class='col-md-6'>{{thing.price|currency:'USD':true}}</div>
                 </div>
-                <!--<div class='row'>
+                <div class='row'>
                     <div class='col-md-3'>5 Star Rating:</div>
                     <div class='col-md-6'>
-                        <ai-star [rating]='thing.starRating'
+                        <star-rate [rating]='thing.starRating'
                                 (ratingClicked)='onRatingClicked($event)'>
-                        </ai-star>
+                        </star-rate>
                     </div>
-                </div>-->
+                </div>
             </div>
 
             <div class='col-md-6'>

@@ -5,10 +5,10 @@ import { Localization, LocaleService, TranslationService } from 'angular-l10n';
 
 
 @Component({
-  templateUrl: './test1.component.html',
-  styleUrls: ['./test1.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class Test1Component extends Localization implements OnInit {
+export class HomeComponent extends Localization implements OnInit {
      title = 'app works!';
      today: number;
     pi: number;

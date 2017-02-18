@@ -36,7 +36,7 @@ export class ProfileComponent implements OnInit {
   saveProfile(formValues) {
     if (this.profileForm.valid) {
       this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
-      this.router.navigate(['test1'])
+      this.router.navigate(['home'])
     }
   }
 
@@ -49,7 +49,7 @@ export class ProfileComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['test1'])
+    this.router.navigate(['home'])
   }
        
 }

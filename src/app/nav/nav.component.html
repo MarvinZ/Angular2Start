@@ -7,9 +7,9 @@
     <!--<div class="collapse navbar-collapse">-->
       <ul class="nav navbar-nav">
         <li>
-          <a [routerLink]="['/test1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ 'Home' | translate:lang }} </a>
+          <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ 'Home' | translate:lang }} </a>
         </li>
-        <li><a [routerLink]="['/test2']" routerLinkActive="active">{{ 'Test2' | translate:lang }}</a></li>
+        <li><a [routerLink]="['/things']" routerLinkActive="active">{{ 'Things' | translate:lang }}</a></li>
         <li ><a [routerLink]="['/genericReport']" routerLinkActive="active">{{ 'Generic report' | translate:lang }}</a></li>
         <li *ngIf="auth.isAuthenticated()" ><a [routerLink]="['/genericReport2']" routerLinkActive="active">{{ 'Secure report' | translate:lang }}</a></li>
      
@@ -22,10 +22,10 @@
               </div>
               <div dropdownMenu class="dropdown-menu">             
                       <li>
-                <a [routerLink]="['/test1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ 'Home' | translate:lang }} </a>
+                <a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ 'Home' | translate:lang }} </a>
               </li>
               <li>
-                <a [routerLink]="['/test2']" routerLinkActive="active">{{ 'Test2' | translate:lang }}</a></li>        
+                <a [routerLink]="['/things']" routerLinkActive="active">{{ 'Things' | translate:lang }}</a></li>        
               </div>
 
             </div>
