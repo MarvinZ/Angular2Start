@@ -33,5 +33,11 @@ export class GenericReportComponent   extends Localization implements OnInit {
       alert("Saved, but saved.. player: " + player.playerAccountNumber);
       this.players[player.playerId].isEditMode = true;
     }
+    SwitchPlayerStatus (id:number) {
+     this.players[id].isActive = !this.players[id].isActive;    
+     alert("Suspended, or unsuspended, who knows?  player id: " + this.players[id].playerId);
+    }
+
+    
 
 }

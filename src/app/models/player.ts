@@ -6,4 +6,10 @@ export class IPlayer {
     pendingbalance: number;
     lastPlayDatetime: string;
     isEditMode: Boolean;
+    isActive: Boolean;
+
+    // constructor() {
+    //     this.isActive = true;
+    //     this.isEditMode = false;
+    // }
 }

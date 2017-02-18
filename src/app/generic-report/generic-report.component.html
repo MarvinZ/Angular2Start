@@ -4,8 +4,6 @@
 
 Am I authenticated? -> {{auth.isAuthenticated()}}
 
-
-
         <div class='table-responsive'>
             <table class='table'
                    *ngIf='players && players.length'>
@@ -25,14 +23,17 @@ Am I authenticated? -> {{auth.isAuthenticated()}}
                         <td *ngIf="player.isEditMode"><input type="number" name="balance-{{in}}" [(ngModel)]="player.balance"></td>
                         <td>{{ player.pendingbalance | currency:'USD':true:'1.2-2' }}</td>
                         <td>{{ player.lastPlayDatetime }}</td>
-                        <button class="btn btn-default" (click)="switchEditMode(in)">{{ player.isEditMode? 'Cancel' : 'Edit' }}</button>
-                        <button class="btn btn-default" (click)="SaveChanges(player)" *ngIf="player.isEditMode">Save</button>
-
+                        <td>
+                            <button class="btn btn-default" (click)="switchEditMode(in)">{{ player.isEditMode? 'Cancel' : 'Edit' }}</button>
+                            <button class="btn btn-default" (click)="SaveChanges(player)" *ngIf="player.isEditMode">Save</button>
+                        </td>
+                        <td>
+                            <button  [ngClass]="{'btn btn-danger' : !player.isActive, 'btn btn-success' : player.isActive}" (click)="SwitchPlayerStatus(in)">{{ player.isActive? 'Reactivate' : 'Suspend' }}</button>                            
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
  <div>
    <pre>{{ players | json }}</pre>
  </div>
