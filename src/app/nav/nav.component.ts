@@ -14,11 +14,10 @@ export class NavComponent  extends Localization  implements OnInit {
         super(locale, translation);
    }
 
-    public  logout(): void {
+  logout(): void {
       this.auth.logout();
-    alert('logout...');
-  }
-
+    }
+    
   ngOnInit() {
   }
 

@@ -20,6 +20,10 @@ import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component'
 import { AuthService } from './user/auth.service'
 import { ThingService } from './services/thing.service'
+import { ReportService } from './services/report.service'
+
+import { ThingDetailGuard } from './guards/thing-detail-guard'
+
 
 import { LocalizationModule } from 'angular-l10n';
 
@@ -31,6 +35,8 @@ import { GenericReportComponent } from './generic-report/generic-report.componen
 import { GenericReport2Component } from './generic-report2/generic-report2.component';
 import { ThingDetailComponent } from './thing-detail/thing-detail.component';
 import { StarComponent } from './star/star.component'
+
+
 
 @NgModule({
   declarations: [
@@ -59,7 +65,9 @@ import { StarComponent } from './star/star.component'
   providers: [
     
         AuthService,
-        ThingService
+        ThingService,
+        ThingDetailGuard,
+        ReportService
   ],
   bootstrap: [AppComponent]
 })
